@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concerts</title>
+    <link rel="stylesheet" href="concerts.css">
+</head>
+
+<body>
+<header>
+    <img src="../IMAGES/logo.png" class="logo">
+    <div class="menu-icon">☰</div>
+</header>
+
+<!-- HERO SECTION -->
+<header class="hero">
+    <h1>Concerts</h1>
+    <p>Découvrez les prochains concerts par catégories</p>
+</header>
+<!-- FORMULAIRE DE FILTRAGE -->
+<section class="filter-form">
+  <form>
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date">
+    </div>
+    <div class="form-group">
+      <label for="genre">Genre</label>
+      <select id="genre" name="genre">
+        <option value="">Tous</option>
+        <option value="metal">Metal</option>
+        <option value="rock">Rock</option>
+        <option value="rap">Rap US</option>
+        <option value="variete">Variété Française</option>
+        <option value="reggae">Reggae</option>
+        <option value="electro">Électro</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="prix">Prix max</label>
+      <input type="number" id="prix" name="prix" placeholder="€">
+    </div>
+    <div class="form-group">
+      <label for="ville">Ville</label>
+      <input type="text" id="ville" name="ville" placeholder="Ex: Paris">
+    </div>
+    <div class="form-group submit-btn">
+      <button type="submit">Filtrer</button>
+    </div>
+  </form>
+</section>
+
+
+<main>
+
+<!-- SECTION METALS -->
+<div class="events-section">
+    <h2 class="category-title">Metals</h2>
+    <div class="events-grid">
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Devourment">
+            <div>
+                <h4>Devourment</h4>
+                <p>Death Metal Brutal – 12 Juin</p>
+                <p class="price">À partir de 56€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Cattle Decapitation">
+            <div>
+                <h4>Cattle Decapitation</h4>
+                <p>Deathgrind – 18 Juin</p>
+                <p class="price">À partir de 60€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Behemoth">
+            <div>
+                <h4>Behemoth</h4>
+                <p>Blackened Death – 25 Juin</p>
+                <p class="price">À partir de 58€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+    </div>
+    <div class="center-btn"><button>Voir plus</button></div>
+</div>
+
+<!-- SECTION ROCKS -->
+<div class="events-section">
+    <h2 class="category-title">Rocks</h2>
+    <div class="events-grid">
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Maneskin">
+            <div>
+                <h4>Maneskin</h4>
+                <p>Rock Alternatif – 3 Juillet</p>
+                <p class="price">À partir de 65€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Skillet">
+            <div>
+                <h4>Skillet</h4>
+                <p>Rock Chrétien – 10 Juillet</p>
+                <p class="price">À partir de 50€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Foo Fighters">
+            <div>
+                <h4>Foo Fighters</h4>
+                <p>Rock Alternatif – 17 Juillet</p>
+                <p class="price">À partir de 70€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+    </div>
+    <div class="center-btn"><button>Voir plus</button></div>
+</div>
+
+<!-- SECTION RAP US -->
+<div class="events-section">
+    <h2 class="category-title">Rap US</h2>
+    <div class="events-grid">
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Kendrick Lamar">
+            <div>
+                <h4>Kendrick Lamar</h4>
+                <p>Hip-Hop – 15 Août</p>
+                <p class="price">À partir de 80€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Joey Bada$$">
+            <div>
+                <h4>Joey Bada$$</h4>
+                <p>East Coast – 21 Août</p>
+                <p class="price">À partir de 55€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Travis Scott">
+            <div>
+                <h4>Travis Scott</h4>
+                <p>Trap – 28 Août</p>
+                <p class="price">À partir de 90€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+    </div>
+    <div class="center-btn"><button>Voir plus</button></div>
+</div>
+
+<!-- SECTION VARIET FR -->
+<div class="events-section">
+    <h2 class="category-title">Variet' Française</h2>
+    <div class="events-grid">
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Angèle">
+            <div>
+                <h4>Angèle</h4>
+                <p>Pop – 2 Septembre</p>
+                <p class="price">À partir de 40€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Zaz">
+            <div>
+                <h4>Zaz</h4>
+                <p>Variété – 8 Septembre</p>
+                <p class="price">À partir de 35€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Vianney">
+            <div>
+                <h4>Vianney</h4>
+                <p>Chanson Française – 15 Septembre</p>
+                <p class="price">À partir de 38€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+    </div>
+    <div class="center-btn"><button>Voir plus</button></div>
+</div>
+
+<!-- SECTION REGGAE -->
+<div class="events-section">
+    <h2 class="category-title">Reggae</h2>
+    <div class="events-grid">
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Damian Marley">
+            <div>
+                <h4>Damian Marley</h4>
+                <p>Reggae Roots – 14 Octobre</p>
+                <p class="price">À partir de 45€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Biga*Ranx">
+            <div>
+                <h4>Biga*Ranx</h4>
+                <p>Reggae Digital – 20 Octobre</p>
+                <p class="price">À partir de 40€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="SOJA">
+            <div>
+                <h4>SOJA</h4>
+                <p>Reggae Fusion – 27 Octobre</p>
+                <p class="price">À partir de 50€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+    </div>
+    <div class="center-btn"><button>Voir plus</button></div>
+</div>
+
+<!-- SECTION ELECTRO -->
+<div class="events-section">
+    <h2 class="category-title">Électro</h2>
+    <div class="events-grid">
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Daft Punk">
+            <div>
+                <h4>Daft Punk</h4>
+                <p>French Touch – 1 Novembre</p>
+                <p class="price">À partir de 70€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Madeon">
+            <div>
+                <h4>Madeon</h4>
+                <p>Electro Pop – 9 Novembre</p>
+                <p class="price">À partir de 65€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event">
+            <img src="../IMAGES/factice.avif" alt="Justice">
+            <div>
+                <h4>Justice</h4>
+                <p>Electro Rock – 15 Novembre</p>
+                <p class="price">À partir de 75€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+    </div>
+    <div class="center-btn"><button>Voir plus</button></div>
+</div>
+
+</main>
+</body>
+</html>
