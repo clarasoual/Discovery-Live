@@ -1,256 +1,114 @@
 /* ---------- BASE ---------- */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0f0f0f;
-  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  line-height: 1.6;
 }
 
-/* ---------- HEADER ---------- */
+/* ---------- HEADER (NAVBAR) ---------- */
 header {
   background-color: #2b0e38;
-  padding: 15px 20px;
+  padding: 15px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
-  width: 70px;
+  width: 100px;
   height: auto;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
 }
 
 .menu-icon {
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.menu-icon a {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.menu-icon a:hover {
+  color: #ffdd59;
+  transform: scale(1.05);
 }
 
 /* ---------- HERO ---------- */
 .hero {
-  background: url('../IMAGES/hero.jpg') center/cover no-repeat;
-  height: 330px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../IMAGES/hero.jpg') center/cover no-repeat;
+  height: 35vh;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0 20px;
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: clamp(32px, 6vw, 48px);
   margin: 0;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .hero p {
-  font-size: 14px;
+  font-size: clamp(14px, 2.5vw, 18px);
   margin-top: 10px;
+  font-weight: 300;
 }
 
-/* ---------- CATEGORY TITLES ---------- */
-.category-title {
-  font-size: 22px;
-  margin-left: 20px;
-  margin-top: 50px;
-  text-transform: uppercase;
-  font-weight: normal;
-}
-
-/* ---------- EVENTS GRID ---------- */
-.events-section {
+/* ---------- FILTER FORM ---------- */
+.filter-form-container {
   max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 40px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
-.events-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 80px;                  
-  justify-content: center;
-  justify-items: center;
-}
-
-.event {
-  background-color: #1a1a1a;
-  padding: 35px;              
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 420px;           
-  height: auto;              
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-sizing: border-box;
-  text-align: center;
-  gap: 15px;                  /* espace entre image, texte et bouton */
-}
-
-.event img {
-  width: 160px;               
-  height: 160px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.event h4 {
-  margin: 0;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.event p {
-  margin: 5px 0 0 0;         
-  font-size: 15px;
-  color: #cccccc;
-}
-
-.event .price {
-  margin-top: 5px;
-  font-size: 14px;
-  color: #aaaaaa;
-}
-
-/* espace supplémentaire pour le bouton */
-.event button {
-  margin-top: 15px;           
-  padding: 10px 18px;
-  background-color: #46145c;
-  border: none;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.event:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 25px rgba(70, 20, 92, 0.7);
-}
-
-/* ---------- CENTER BUTTON ---------- */
-.center-btn {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.center-btn button {
-  padding: 12px 32px;
-  background-color: #46145c;
-  border: none;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* ---------- CAROUSEL ---------- */
-.carousel {
-  max-width: 700px;
-  margin: 50px auto;
-  position: relative;
-}
-
-.carousel img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.carousel button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: white;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.left-btn { left: 10px; }
-.right-btn { right: 10px; }
-
-.carousel-text {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 28px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (min-width: 768px) {
-  .events-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 80px;
-  }
-
-  .logo {
-    width: 100px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .event img {
-    width: 160px;
-    height: 160px;
-  }
-
-  .event {
-    max-width: 420px;
-    height: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .events-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 100px;               
-  }
-
-  .event {
-    max-width: 420px;
-    height: auto;
-  }
-
-  .event img {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-/* ---------- FILTRE FORMULAIRE ---------- */
 .filter-form {
+  max-width: 900px;
   width: 100%;
-  background-color: #1a1a1a;
-  padding: 30px 20px;
-  margin-top: 30px;
+  margin: 0 auto;
+  background-color: #1f1f1f;
+  padding: 20px;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .filter-form form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 20px;
+  gap: 12px; /* réduit de 20px à 12px */
 }
 
 .filter-form .form-group {
   display: flex;
   flex-direction: column;
   flex: 1 1 200px;
+  min-width: 150px;
 }
 
 .filter-form label {
-  margin-bottom: 8px;
+  margin-bottom: 6px; /* légèrement réduit pour plus de compacité */
   font-size: 14px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .filter-form input,
@@ -263,7 +121,7 @@ header {
 
 .filter-form input:focus,
 .filter-form select:focus {
-  outline: 2px solid #46145c;
+  outline: 2px solid #5a1b7e;
 }
 
 .filter-form .submit-btn {
@@ -272,26 +130,281 @@ header {
 
 .filter-form button {
   padding: 12px 24px;
-  background-color: #46145c;
-  color: #ffffff;
+  background-color: #5a1b7e;
+  color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .filter-form button:hover {
-  background-color: #622075;
+  background-color: #7c3eb0;
+  transform: scale(1.05);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* ---------- EVENTS GRID ---------- */
+.events-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.events-section h2,
+.events-section h3 {
+  font-size: clamp(20px, 4vw, 28px);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.event {
+  background-color: #1f1f1f;
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  gap: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+.event img {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.event img:hover {
+  transform: scale(1.05);
+}
+
+.event h4 {
+  margin: 0;
+  font-size: clamp(18px, 3vw, 22px);
+  text-transform: uppercase;
+}
+
+.event p {
+  font-size: clamp(14px, 2.5vw, 16px);
+  margin: 8px 0;
+  color: #aaaaaa;
+}
+
+.event button {
+  margin-top: 12px;
+  padding: 10px 18px;
+  background-color: #5a1b7e;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.event button:hover {
+  background-color: #7c3eb0;
+  transform: scale(1.05);
+}
+
+/* ---------- CENTER BUTTON ---------- */
+.center-btn {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.center-btn button {
+  padding: 12px 30px;
+  background-color: #5a1b7e;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: #2b0e38;
+  color: #fff;
+  padding: 25px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.footer-links a:hover {
+  color: #ffdd59;
+  transform: scale(1.05);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* 🌟 TABLETTE */
+@media (max-width: 1023px) {
+  .filter-form {
+    max-width: 650px;
+  }
+
+  .filter-form form {
+    gap: 10px; /* réduit un peu le gap sur tablette */
+  }
+
+  .events-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+  }
+
+  .event {
+    max-width: 280px;
+  }
+
+  .event img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ---- MOBILE ---- */
+@media (max-width: 767px) {
+  /* HEADER */
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  .menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .menu-icon a {
+    font-size: 15px;
+  }
+
+  /* FILTER FORM */
+  .filter-form-container {
+    padding: 0 20px;
+  }
+
+  .filter-form {
+    max-width: 100%;
+    padding: 15px;
+  }
+
   .filter-form form {
     flex-direction: column;
+    gap: 4px; /* espace très compact entre les champs */
+  }
+
+  .filter-form .form-group {
+    margin-bottom: 0; /* supprime les marges implicites */
+  }
+
+  .filter-form label {
+    margin-bottom: 4px; /* réduit l'espace sous le label */
+    font-size: 14px;
+  }
+
+  .filter-form input,
+  .filter-form select {
+    padding: 8px; /* champ plus compact */
   }
 
   .filter-form .submit-btn {
     align-self: center;
+  }
+
+  .filter-form button {
+    padding: 10px 20px; /* bouton plus compact */
+  }
+
+  /* TOGGLE FILTRE MOBILE */
+  .filter-toggle {
+    display: block;
+    width: 100%;
+    background-color: #5a1b7e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .filter-content {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .filter-content.active {
+    display: flex;
+  }
+
+  /* EVENTS GRID */
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .event {
+    max-width: 100%;
+  }
+
+  .event img {
+    width: 140px;
+    height: 140px;
   }
 }

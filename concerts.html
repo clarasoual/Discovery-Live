@@ -9,57 +9,65 @@
 
 <body>
 <header>
-    <img src="../IMAGES/logo.png" class="logo">
-    <div class="menu-icon">☰</div>
+    <img src="IMAGES/logo.png" class="logo">
+    <div class="menu-icon">
+        <a href="index.html">Accueil</a>
+        <a href="decouvrir.html">Découvrir</a>
+        <a href="concerts.html">Concerts</a>
+    </div>
 </header>
 
 <!-- HERO SECTION -->
-<header class="hero">
+<section class="hero">    
     <h1>Concerts</h1>
     <p>Découvrez les prochains concerts par catégories</p>
-</header>
-<!-- FORMULAIRE DE FILTRAGE -->
-<section class="filter-form">
-  <form>
-    <div class="form-group">
-      <label for="date">Date</label>
-      <input type="date" id="date" name="date">
-    </div>
-    <div class="form-group">
-      <label for="genre">Genre</label>
-      <select id="genre" name="genre">
-        <option value="">Tous</option>
-        <option value="metal">Metal</option>
-        <option value="rock">Rock</option>
-        <option value="rap">Rap US</option>
-        <option value="variete">Variété Française</option>
-        <option value="reggae">Reggae</option>
-        <option value="electro">Électro</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="prix">Prix max</label>
-      <input type="number" id="prix" name="prix" placeholder="€">
-    </div>
-    <div class="form-group">
-      <label for="ville">Ville</label>
-      <input type="text" id="ville" name="ville" placeholder="Ex: Paris">
-    </div>
-    <div class="form-group submit-btn">
-      <button type="submit">Filtrer</button>
-    </div>
-  </form>
 </section>
 
+<!-- FORMULAIRE DE FILTRAGE -->
+<section class="filter-form">
+  <!-- BOUTON MOBILE -->
+  <button class="filter-toggle">🔍 Filtrer les concerts</button>
+
+  <div class="filter-content">
+    <form>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date">
+      </div>
+      <div class="form-group">
+        <label for="genre">Genre</label>
+        <select id="genre" name="genre">
+          <option value="">Tous</option>
+          <option value="metal">Metal</option>
+          <option value="rock">Rock</option>
+          <option value="rap">Rap US</option>
+          <option value="variete">Variété Française</option>
+          <option value="reggae">Reggae</option>
+          <option value="electro">Électro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="prix">Prix max</label>
+        <input type="number" id="prix" name="prix" placeholder="€">
+      </div>
+      <div class="form-group">
+        <label for="ville">Ville</label>
+        <input type="text" id="ville" name="ville" placeholder="Ex: Paris">
+      </div>
+      <div class="form-group submit-btn">
+        <button type="submit">Filtrer</button>
+      </div>
+    </form>
+  </div>
+</section>
 
 <main>
-
 <!-- SECTION METALS -->
 <div class="events-section">
     <h2 class="category-title">Metals</h2>
     <div class="events-grid">
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Devourment">
+            <img src="IMAGES/factice.avif" alt="Devourment">
             <div>
                 <h4>Devourment</h4>
                 <p>Death Metal Brutal – 12 Juin</p>
@@ -68,7 +76,7 @@
             </div>
         </div>
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Cattle Decapitation">
+            <img src="IMAGES/factice.avif" alt="Cattle Decapitation">
             <div>
                 <h4>Cattle Decapitation</h4>
                 <p>Deathgrind – 18 Juin</p>
@@ -77,7 +85,7 @@
             </div>
         </div>
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Behemoth">
+            <img src="IMAGES/factice.avif" alt="Behemoth">
             <div>
                 <h4>Behemoth</h4>
                 <p>Blackened Death – 25 Juin</p>
@@ -94,7 +102,7 @@
     <h2 class="category-title">Rocks</h2>
     <div class="events-grid">
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Maneskin">
+            <img src="IMAGES/factice.avif" alt="Maneskin">
             <div>
                 <h4>Maneskin</h4>
                 <p>Rock Alternatif – 3 Juillet</p>
@@ -103,7 +111,7 @@
             </div>
         </div>
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Skillet">
+            <img src="IMAGES/factice.avif" alt="Skillet">
             <div>
                 <h4>Skillet</h4>
                 <p>Rock Chrétien – 10 Juillet</p>
@@ -112,7 +120,7 @@
             </div>
         </div>
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Foo Fighters">
+            <img src="IMAGES/factice.avif" alt="Foo Fighters">
             <div>
                 <h4>Foo Fighters</h4>
                 <p>Rock Alternatif – 17 Juillet</p>
@@ -129,7 +137,7 @@
     <h2 class="category-title">Rap US</h2>
     <div class="events-grid">
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Kendrick Lamar">
+            <img src="IMAGES/factice.avif" alt="Kendrick Lamar">
             <div>
                 <h4>Kendrick Lamar</h4>
                 <p>Hip-Hop – 15 Août</p>
@@ -138,7 +146,7 @@
             </div>
         </div>
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Joey Bada$$">
+            <img src="IMAGES/factice.avif" alt="Joey Bada$$">
             <div>
                 <h4>Joey Bada$$</h4>
                 <p>East Coast – 21 Août</p>
@@ -147,7 +155,7 @@
             </div>
         </div>
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Travis Scott">
+            <img src="IMAGES/factice.avif" alt="Travis Scott">
             <div>
                 <h4>Travis Scott</h4>
                 <p>Trap – 28 Août</p>
@@ -164,7 +172,7 @@
     <h2 class="category-title">Variet' Française</h2>
     <div class="events-grid">
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Angèle">
+            <img src="IMAGES/factice.avif" alt="Angèle">
             <div>
                 <h4>Angèle</h4>
                 <p>Pop – 2 Septembre</p>
@@ -173,7 +181,7 @@
             </div>
         </div>
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Zaz">
+            <img src="IMAGES/factice.avif" alt="Zaz">
             <div>
                 <h4>Zaz</h4>
                 <p>Variété – 8 Septembre</p>
@@ -182,7 +190,7 @@
             </div>
         </div>
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Vianney">
+            <img src="IMAGES/factice.avif" alt="Vianney">
             <div>
                 <h4>Vianney</h4>
                 <p>Chanson Française – 15 Septembre</p>
@@ -199,7 +207,7 @@
     <h2 class="category-title">Reggae</h2>
     <div class="events-grid">
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Damian Marley">
+            <img src="IMAGES/factice.avif" alt="Damian Marley">
             <div>
                 <h4>Damian Marley</h4>
                 <p>Reggae Roots – 14 Octobre</p>
@@ -208,7 +216,7 @@
             </div>
         </div>
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Biga*Ranx">
+            <img src="IMAGES/factice.avif" alt="Biga*Ranx">
             <div>
                 <h4>Biga*Ranx</h4>
                 <p>Reggae Digital – 20 Octobre</p>
@@ -217,7 +225,7 @@
             </div>
         </div>
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="SOJA">
+            <img src="IMAGES/factice.avif" alt="SOJA">
             <div>
                 <h4>SOJA</h4>
                 <p>Reggae Fusion – 27 Octobre</p>
@@ -234,7 +242,7 @@
     <h2 class="category-title">Électro</h2>
     <div class="events-grid">
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Daft Punk">
+            <img src="IMAGES/factice.avif" alt="Daft Punk">
             <div>
                 <h4>Daft Punk</h4>
                 <p>French Touch – 1 Novembre</p>
@@ -243,7 +251,7 @@
             </div>
         </div>
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Madeon">
+            <img src="IMAGES/factice.avif" alt="Madeon">
             <div>
                 <h4>Madeon</h4>
                 <p>Electro Pop – 9 Novembre</p>
@@ -252,7 +260,7 @@
             </div>
         </div>
         <div class="event">
-            <img src="../IMAGES/factice.avif" alt="Justice">
+            <img src="IMAGES/factice.avif" alt="Justice">
             <div>
                 <h4>Justice</h4>
                 <p>Electro Rock – 15 Novembre</p>
@@ -265,5 +273,27 @@
 </div>
 
 </main>
+
+<footer>
+  <div class="footer-content">
+    <p>© 2025 Discovery Live. Tous droits réservés.</p>
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="decouvrir.html">Découvrir</a>
+      <a href="concerts.html">Concerts</a>
+      <a href="contacts">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggleBtn = document.querySelector(".filter-toggle");
+  const filterContent = document.querySelector(".filter-content");
+
+  toggleBtn.addEventListener("click", () => {
+    filterContent.classList.toggle("active");
+  });
+</script>
+
 </body>
 </html>
