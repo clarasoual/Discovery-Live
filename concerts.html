@@ -8,9 +8,6 @@
 </head>
 
 <body>
-    <p style="color:red; font-size:30px;">
-TEST MODIF HTML
-</p>
 <header>
     <img src="IMAGES/logo.png" class="logo">
     <div class="menu-icon">
@@ -28,12 +25,10 @@ TEST MODIF HTML
 
 <!-- FORMULAIRE DE FILTRAGE -->
 <section class="filter-form">
-  <!-- BOUTON MOBILE -->
   <button class="filter-toggle">🔍 Filtrer les concerts</button>
-
   <div class="filter-content">
     <form id="filterForm" action="traitement.php" method="POST">
-    <div class="form-group">
+      <div class="form-group">
         <label for="date">Date</label>
         <input type="date" id="date" name="date">
       </div>
@@ -53,17 +48,17 @@ TEST MODIF HTML
         <label for="prix">Prix max</label>
         <input type="number" id="prix" name="prix" placeholder="€">
       </div>
-    <div class="form-group">
-    <label for="salle">Type de salle</label>
-    <select id="salle" name="salle">
-        <option value="">Tous</option>
-        <option value="10-100">10 à 100 personnes</option>
-        <option value="101-500">101 à 500 personnes</option>
-        <option value="501-1000">501 à 1000 personnes</option>
-        <option value="1001-5000">1001 à 5000 personnes</option>
-        <option value="5001+">Plus de 5000 personnes</option>
-    </select>
-    </div>
+      <div class="form-group">
+        <label for="salle">Type de salle</label>
+        <select id="salle" name="salle">
+          <option value="">Tous</option>
+          <option value="10-100">10 à 100 personnes</option>
+          <option value="101-500">101 à 500 personnes</option>
+          <option value="501-1000">501 à 1000 personnes</option>
+          <option value="1001-5000">1001 à 5000 personnes</option>
+          <option value="5001+">Plus de 5000 personnes</option>
+        </select>
+      </div>
       <div class="form-group submit-btn">
         <button type="submit">Filtrer</button>
       </div>
@@ -72,12 +67,13 @@ TEST MODIF HTML
 </section>
 
 <main>
+
 <!-- SECTION METALS -->
 <div class="events-section">
     <h2 class="category-title">Metals</h2>
     <div class="events-grid">
         <div class="event">
-            <img src="IMAGES/factice.avif" alt="Devourment">
+            <img src="IMAGES/devourment.jpg" alt="Devourment">
             <div>
                 <h4>Devourment</h4>
                 <p>Death Metal Brutal – 12 Juin</p>
@@ -86,7 +82,7 @@ TEST MODIF HTML
             </div>
         </div>
         <div class="event">
-            <img src="IMAGES/factice.avif" alt="Cattle Decapitation">
+            <img src="IMAGES/Cattle-decapitation.jpg" alt="Cattle Decapitation">
             <div>
                 <h4>Cattle Decapitation</h4>
                 <p>Deathgrind – 18 Juin</p>
@@ -95,7 +91,7 @@ TEST MODIF HTML
             </div>
         </div>
         <div class="event">
-            <img src="IMAGES/factice.avif" alt="Behemoth">
+            <img src="IMAGES/Behemoth.jpg" alt="Behemoth">
             <div>
                 <h4>Behemoth</h4>
                 <p>Blackened Death – 25 Juin</p>
@@ -103,8 +99,27 @@ TEST MODIF HTML
                 <button>Plus d'infos</button>
             </div>
         </div>
+        <!-- CACHÉS PAR DÉFAUT -->
+        <div class="event hidden">
+            <img src="IMAGES/novelists.jpg" alt="Novelists">
+            <div>
+                <h4>Novelists</h4>
+                <p>Métal Progressif – 2 Juillet</p>
+                <p class="price">À partir de 62€</p>
+                <button onclick="window.location.href='novelists.html'">Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event hidden">
+            <img src="IMAGES/gojira.jpg" alt="Gojira">
+            <div>
+                <h4>Gojira</h4>
+                <p>Metal Progressif – 9 Juillet</p>
+                <p class="price">À partir de 65€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
     </div>
-    <div class="center-btn"><button>Voir plus</button></div>
+    <div class="center-btn"><button class="voir-plus-btn">Voir plus</button></div>
 </div>
 
 <!-- SECTION ROCKS -->
@@ -138,8 +153,27 @@ TEST MODIF HTML
                 <button>Plus d'infos</button>
             </div>
         </div>
+        <!-- CACHÉS PAR DÉFAUT -->
+        <div class="event hidden">
+            <img src="IMAGES/factice.avif" alt="The Strokes">
+            <div>
+                <h4>The Strokes</h4>
+                <p>Indie Rock – 24 Juillet</p>
+                <p class="price">À partir de 68€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event hidden">
+            <img src="IMAGES/factice.avif" alt="Arctic Monkeys">
+            <div>
+                <h4>Arctic Monkeys</h4>
+                <p>Rock Indie – 31 Juillet</p>
+                <p class="price">À partir de 72€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
     </div>
-    <div class="center-btn"><button>Voir plus</button></div>
+    <div class="center-btn"><button class="voir-plus-btn">Voir plus</button></div>
 </div>
 
 <!-- SECTION RAP US -->
@@ -173,8 +207,27 @@ TEST MODIF HTML
                 <button>Plus d'infos</button>
             </div>
         </div>
+        <!-- CACHÉS PAR DÉFAUT -->
+        <div class="event hidden">
+            <img src="IMAGES/factice.avif" alt="J. Cole">
+            <div>
+                <h4>J. Cole</h4>
+                <p>Hip-Hop – 4 Septembre</p>
+                <p class="price">À partir de 75€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event hidden">
+            <img src="IMAGES/factice.avif" alt="Denzel Curry">
+            <div>
+                <h4>Denzel Curry</h4>
+                <p>Hip-Hop – 11 Septembre</p>
+                <p class="price">À partir de 50€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
     </div>
-    <div class="center-btn"><button>Voir plus</button></div>
+    <div class="center-btn"><button class="voir-plus-btn">Voir plus</button></div>
 </div>
 
 <!-- SECTION VARIET FR -->
@@ -208,8 +261,27 @@ TEST MODIF HTML
                 <button>Plus d'infos</button>
             </div>
         </div>
+        <!-- CACHÉS PAR DÉFAUT -->
+        <div class="event hidden">
+            <img src="IMAGES/factice.avif" alt="Pomme">
+            <div>
+                <h4>Pomme</h4>
+                <p>Folk – 22 Septembre</p>
+                <p class="price">À partir de 32€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event hidden">
+            <img src="IMAGES/factice.avif" alt="Eddy de Pretto">
+            <div>
+                <h4>Eddy de Pretto</h4>
+                <p>Pop – 29 Septembre</p>
+                <p class="price">À partir de 36€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
     </div>
-    <div class="center-btn"><button>Voir plus</button></div>
+    <div class="center-btn"><button class="voir-plus-btn">Voir plus</button></div>
 </div>
 
 <!-- SECTION REGGAE -->
@@ -243,8 +315,27 @@ TEST MODIF HTML
                 <button>Plus d'infos</button>
             </div>
         </div>
+        <!-- CACHÉS PAR DÉFAUT -->
+        <div class="event hidden">
+            <img src="IMAGES/factice.avif" alt="Gentleman">
+            <div>
+                <h4>Gentleman</h4>
+                <p>Reggae – 3 Novembre</p>
+                <p class="price">À partir de 42€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event hidden">
+            <img src="IMAGES/factice.avif" alt="Groundation">
+            <div>
+                <h4>Groundation</h4>
+                <p>Reggae Jazz – 10 Novembre</p>
+                <p class="price">À partir de 38€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
     </div>
-    <div class="center-btn"><button>Voir plus</button></div>
+    <div class="center-btn"><button class="voir-plus-btn">Voir plus</button></div>
 </div>
 
 <!-- SECTION ELECTRO -->
@@ -278,8 +369,27 @@ TEST MODIF HTML
                 <button>Plus d'infos</button>
             </div>
         </div>
+        <!-- CACHÉS PAR DÉFAUT -->
+        <div class="event hidden">
+            <img src="IMAGES/factice.avif" alt="Gesaffelstein">
+            <div>
+                <h4>Gesaffelstein</h4>
+                <p>Dark Electro – 22 Novembre</p>
+                <p class="price">À partir de 68€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
+        <div class="event hidden">
+            <img src="IMAGES/factice.avif" alt="Polo & Pan">
+            <div>
+                <h4>Polo & Pan</h4>
+                <p>Electro Pop – 29 Novembre</p>
+                <p class="price">À partir de 60€</p>
+                <button>Plus d'infos</button>
+            </div>
+        </div>
     </div>
-    <div class="center-btn"><button>Voir plus</button></div>
+    <div class="center-btn"><button class="voir-plus-btn">Voir plus</button></div>
 </div>
 
 </main>
@@ -297,11 +407,45 @@ TEST MODIF HTML
 </footer>
 
 <script>
+  // --- TOGGLE FILTRE MOBILE ---
   const toggleBtn = document.querySelector(".filter-toggle");
   const filterContent = document.querySelector(".filter-content");
-
   toggleBtn.addEventListener("click", () => {
     filterContent.classList.toggle("active");
+  });
+
+  // --- VOIR PLUS / VOIR MOINS ---
+  document.querySelectorAll(".voir-plus-btn").forEach(btn => {
+    const section = btn.closest(".events-section");
+    const hiddenEvents = Array.from(section.querySelectorAll(".event.hidden"));
+
+    // Pas de concerts cachés → on masque le bouton
+    if (hiddenEvents.length === 0) {
+      btn.closest(".center-btn").style.display = "none";
+      return;
+    }
+
+    btn.addEventListener("click", () => {
+      const isExpanded = btn.getAttribute("data-expanded") === "true";
+
+      if (!isExpanded) {
+        // VOIR PLUS → on affiche
+        hiddenEvents.forEach(event => {
+          event.style.display = "flex";
+          event.style.animation = "fadeIn 0.4s ease";
+        });
+        btn.textContent = "Voir moins";
+        btn.setAttribute("data-expanded", "true");
+      } else {
+        // VOIR MOINS → on cache + scroll doux vers le titre de section
+        hiddenEvents.forEach(event => {
+          event.style.display = "none";
+        });
+        btn.textContent = "Voir plus";
+        btn.setAttribute("data-expanded", "false");
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
   });
 </script>
 
