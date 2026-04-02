@@ -66,9 +66,27 @@ header {
 /* ---------- HERO ---------- */
 .hero {
   width: 100%;
-  background-color: #2b0e38;
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.5);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 60px 20px 40px;
 }
 
 .hero h1 {
@@ -84,7 +102,6 @@ header {
   color: rgba(255,255,255,0.75);
   margin: 0;
 }
-
 /* ---------- INTRO ---------- */
 .intro {
   max-width: 800px;
