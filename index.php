@@ -77,7 +77,7 @@
         <a href="index.php">Accueil</a>
         <a href="decouvrir.html">Découvrir</a>
         <a href="concerts.php">Concerts</a>
-        <a href="contacts">Contact</a>
+      <a href="proposer.php">Proposer un concert</a>
       </div>
     </div>
   </footer>

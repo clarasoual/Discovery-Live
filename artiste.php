@@ -109,7 +109,7 @@ $heure = date('H:i', strtotime($concert['heure']));
       <a href="index.php">Accueil</a>
       <a href="decouvrir.html">Découvrir</a>
       <a href="concerts.php">Concerts</a>
-      <a href="contacts">Contact</a>
+      <a href="proposer.php">Proposer</a>
     </div>
   </div>
 </footer>
