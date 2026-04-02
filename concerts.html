@@ -8,6 +8,9 @@
 </head>
 
 <body>
+    <p style="color:red; font-size:30px;">
+TEST MODIF HTML
+</p>
 <header>
     <img src="IMAGES/logo.png" class="logo">
     <div class="menu-icon">
@@ -29,8 +32,8 @@
   <button class="filter-toggle">🔍 Filtrer les concerts</button>
 
   <div class="filter-content">
-    <form>
-      <div class="form-group">
+    <form id="filterForm" action="traitement.php" method="POST">
+    <div class="form-group">
         <label for="date">Date</label>
         <input type="date" id="date" name="date">
       </div>
@@ -50,10 +53,17 @@
         <label for="prix">Prix max</label>
         <input type="number" id="prix" name="prix" placeholder="€">
       </div>
-      <div class="form-group">
-        <label for="ville">Ville</label>
-        <input type="text" id="ville" name="ville" placeholder="Ex: Paris">
-      </div>
+    <div class="form-group">
+    <label for="salle">Type de salle</label>
+    <select id="salle" name="salle">
+        <option value="">Tous</option>
+        <option value="10-100">10 à 100 personnes</option>
+        <option value="101-500">101 à 500 personnes</option>
+        <option value="501-1000">501 à 1000 personnes</option>
+        <option value="1001-5000">1001 à 5000 personnes</option>
+        <option value="5001+">Plus de 5000 personnes</option>
+    </select>
+    </div>
       <div class="form-group submit-btn">
         <button type="submit">Filtrer</button>
       </div>
