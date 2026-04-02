@@ -273,22 +273,22 @@ header {
 
   header {
     flex-direction: column;
-    justify-content: center; /* CENTRE VERTICALEMENT */
-    align-items: center;     /* CENTRE HORIZONTALEMENT */
+    justify-content: center;
+    align-items: center;
     gap: 12px;
     padding: 15px;
     text-align: center;
   }
 
   .logo {
-    width: 70px;  /* même taille qu’en desktop → plus joli */
+    width: 70px;
   }
 
   .menu-icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* permet d’aller à la ligne si besoin */
+    flex-wrap: wrap;
     gap: 20px;
     width: 100%;
   }
@@ -301,18 +301,13 @@ header {
 /* ---------- FOOTER ---------- */
 footer {
   background-color: #2b0e38;
-  text-align: center;
-  padding: 20px;
-  color: #fff;
-  font-size: 14px;
-}
-/* ---------- FOOTER ---------- */
-footer {
-  background-color: #2b0e38;
   color: #ffffff;
   padding: 25px 20px;
   text-align: center;
   font-size: 14px;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 -20px;
 }
 
 .footer-content {
@@ -350,4 +345,3 @@ footer {
     font-size: 13px;
   }
 }
-
