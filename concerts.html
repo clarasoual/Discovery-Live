@@ -69,7 +69,7 @@
 <main>
 
 <!-- SECTION METALS -->
-<div class="events-section">
+<div class="events-section" id="metal">
     <h2 class="category-title">Metals</h2>
     <div class="events-grid">
         <div class="event">
@@ -81,15 +81,15 @@
                 <button>Plus d'infos</button>
             </div>
         </div>
-<div class="event">
-    <img src="IMAGES/myrath.jpg" alt="Myrath">
-    <div>
-        <h4>Myrath</h4>
-        <p>Oriental Metal – 16 Octobre 2026</p>
-        <p class="price">À partir de 60€</p>
-        <button onclick="window.location.href='myrath.html'">Plus d'infos</button>
-    </div>
-</div>
+        <div class="event">
+            <img src="IMAGES/myrath.jpg" alt="Myrath">
+            <div>
+                <h4>Myrath</h4>
+                <p>Oriental Metal – 16 Octobre 2026</p>
+                <p class="price">À partir de 60€</p>
+                <button onclick="window.location.href='myrath.html'">Plus d'infos</button>
+            </div>
+        </div>
         <div class="event">
             <img src="IMAGES/Behemoth.jpg" alt="Behemoth">
             <div>
@@ -123,7 +123,7 @@
 </div>
 
 <!-- SECTION ROCKS -->
-<div class="events-section">
+<div class="events-section" id="rock">
     <h2 class="category-title">Rocks</h2>
     <div class="events-grid">
         <div class="event">
@@ -177,7 +177,7 @@
 </div>
 
 <!-- SECTION RAP US -->
-<div class="events-section">
+<div class="events-section" id="rap">
     <h2 class="category-title">Rap US</h2>
     <div class="events-grid">
         <div class="event">
@@ -231,7 +231,7 @@
 </div>
 
 <!-- SECTION VARIET FR -->
-<div class="events-section">
+<div class="events-section" id="variete">
     <h2 class="category-title">Variet' Française</h2>
     <div class="events-grid">
         <div class="event">
@@ -285,7 +285,7 @@
 </div>
 
 <!-- SECTION REGGAE -->
-<div class="events-section">
+<div class="events-section" id="reggae">
     <h2 class="category-title">Reggae</h2>
     <div class="events-grid">
         <div class="event">
@@ -339,7 +339,7 @@
 </div>
 
 <!-- SECTION ELECTRO -->
-<div class="events-section">
+<div class="events-section" id="electro">
     <h2 class="category-title">Électro</h2>
     <div class="events-grid">
         <div class="event">
@@ -419,7 +419,6 @@
     const section = btn.closest(".events-section");
     const hiddenEvents = Array.from(section.querySelectorAll(".event.hidden"));
 
-    // Pas de concerts cachés → on masque le bouton
     if (hiddenEvents.length === 0) {
       btn.closest(".center-btn").style.display = "none";
       return;
@@ -429,7 +428,6 @@
       const isExpanded = btn.getAttribute("data-expanded") === "true";
 
       if (!isExpanded) {
-        // VOIR PLUS → on affiche
         hiddenEvents.forEach(event => {
           event.style.display = "flex";
           event.style.animation = "fadeIn 0.4s ease";
@@ -437,7 +435,6 @@
         btn.textContent = "Voir moins";
         btn.setAttribute("data-expanded", "true");
       } else {
-        // VOIR MOINS → on cache + scroll doux vers le titre de section
         hiddenEvents.forEach(event => {
           event.style.display = "none";
         });
