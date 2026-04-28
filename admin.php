@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Mot de passe admin simple
 $mot_de_passe = "admin123";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {
@@ -196,7 +195,6 @@ if (isset($_POST['logout'])) {
 
 <?php if (!isset($_SESSION['admin'])) : ?>
 
-  <!-- FORMULAIRE DE CONNEXION -->
   <div class="login-form">
     <h2>🔒 Accès Admin</h2>
 
@@ -215,11 +213,12 @@ if (isset($_POST['logout'])) {
 
 <?php else : ?>
 
-  <!-- TABLEAU DES MESSAGES -->
   <?php
   require 'vendor/autoload.php';
 
-  $client = new MongoDB\Client("mongodb://localhost:27017");
+  $mongoHost = getenv('MONGO_HOST') ?: 'localhost';
+  $mongoPort = getenv('MONGO_PORT') ?: '27017';
+  $client = new MongoDB\Client("mongodb://$mongoHost:$mongoPort");
   $collection = $client->discovery_live->contacts;
   $documents = $collection->find([], ['sort' => ['created_at' => -1]]);
   $messages = iterator_to_array($documents);

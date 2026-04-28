@@ -10,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email   = trim($_POST['email'] ?? '');
     $message = trim($_POST['message'] ?? '');
     
-    // Champs spécifiques selon le type
     $artiste = trim($_POST['artiste'] ?? '');
     $date    = trim($_POST['date'] ?? '');
     $lien    = trim($_POST['lien'] ?? '');
@@ -21,7 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $erreur = 'Adresse email invalide.';
     } else {
         try {
-            $client = new MongoDB\Client("mongodb://localhost:27017");
+            $mongoHost = getenv('MONGO_HOST') ?: 'localhost';
+            $mongoPort = getenv('MONGO_PORT') ?: '27017';
+            $client = new MongoDB\Client("mongodb://$mongoHost:$mongoPort");
             $collection = $client->discovery_live->contacts;
 
             $document = [
@@ -218,7 +219,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           </select>
         </div>
 
-        <!-- Champs spécifiques à la proposition de concert -->
         <div class="champs-concert" id="champs-concert">
           <div class="form-group">
             <label>Nom de l'artiste</label>
