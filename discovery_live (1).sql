@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : jeu. 02 avr. 2026 à 16:41
+-- Généré le : mar. 28 avr. 2026 à 08:41
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -50,22 +50,22 @@ CREATE TABLE `concerts` (
 --
 
 INSERT INTO `concerts` (`id`, `artiste`, `genre`, `date_concert`, `heure`, `id_salle`, `prix_min`, `prix_max`, `image`, `description`, `lien_reservation`, `lien_spotify`, `lien_youtube`, `lien_applemusic`, `lien_deezer`) VALUES
-(1, 'Novelists', 'metal', '2025-11-19', '20:30:00', 2, 18.00, 25.00, 'IMAGES/novelists.jpg', 'Novelists est un groupe français de metal moderne connu pour son mélange puissant de riffs techniques, de mélodies aériennes et d\'émotions intenses.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
-(2, 'Devourment', 'metal', '2025-12-12', '20:00:00', 1, 22.00, 30.00, 'IMAGES/devourment.jpg', 'Death Metal Brutal américain à son paroxysme. Une performance live dévastratrice.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
+(1, 'Novelists', 'metal', '2026-11-19', '20:30:00', 2, 18.00, 25.00, 'IMAGES/novelists.jpg', 'Novelists est un groupe français de metal moderne connu pour son mélange puissant de riffs techniques, de mélodies aériennes et d\'émotions intenses.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
+(2, 'Devourment', 'metal', '2026-12-12', '20:00:00', 1, 22.00, 30.00, 'IMAGES/devourment.jpg', 'Death Metal Brutal américain à son paroxysme. Une performance live dévastratrice.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
 (3, 'Myrath', 'metal', '2026-10-16', '20:00:00', 2, 60.00, 90.00, 'IMAGES/myrath.jpg', 'Groupe franco-tunisien de Blazing Desert Metal, Myrath mêle riffs puissants et mélodies orientales envoûtantes.', 'https://access-live.net/Myrath-billet-concert-france-2026', 'https://open.spotify.com/artist/72500XOYPw5e7OgFWuW2Gl', 'https://www.youtube.com/channel/UCBZIyqn0Jl66ndrxT1I6qwA', 'https://music.apple.com/us/artist/myrath/317299570', 'https://www.deezer.com/en/artist/246392'),
-(4, 'Behemoth', 'metal', '2026-02-25', '20:00:00', 2, 35.00, 50.00, 'IMAGES/behemoth.jpg', 'Géants du Blackened Death Metal polonais, Behemoth offre un spectacle visuel et sonore d\'une intensité rare.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
-(5, 'Maneskin', 'rock', '2026-02-03', '20:30:00', 14, 45.00, 75.00, 'IMAGES/maneskin.jpg', 'Le groupe de rock alternatif italien qui a conquis l\'Europe. Énergie scénique explosive garantie.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
-(6, 'Skillet', 'rock', '2026-02-10', '20:00:00', 2, 30.00, 45.00, 'IMAGES/skillet.jpg', 'Rock chrétien américain à l\'énergie communicative. Skillet est connu pour ses concerts enflammés.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
-(7, 'Foo Fighters', 'rock', '2026-03-17', '20:30:00', 3, 55.00, 90.00, 'IMAGES/foofighters.jpg', 'Les légendes du rock américain de retour en France pour une soirée mémorable.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
+(4, 'Behemoth', 'metal', '2026-05-25', '20:00:00', 2, 35.00, 50.00, 'IMAGES/behemoth.jpg', 'Géants du Blackened Death Metal polonais, Behemoth offre un spectacle visuel et sonore d\'une intensité rare.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
+(5, 'Maneskin', 'rock', '2026-07-03', '20:30:00', 14, 45.00, 75.00, 'IMAGES/maneskin.jpg', 'Le groupe de rock alternatif italien qui a conquis l\'Europe. Énergie scénique explosive garantie.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
+(6, 'Skillet', 'rock', '2026-09-10', '20:00:00', 2, 30.00, 45.00, 'IMAGES/skillet.jpg', 'Rock chrétien américain à l\'énergie communicative. Skillet est connu pour ses concerts enflammés.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
+(7, 'Foo Fighters', 'rock', '2026-11-17', '20:30:00', 3, 55.00, 90.00, 'IMAGES/foofighters.jpg', 'Les légendes du rock américain de retour en France pour une soirée mémorable.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
 (8, 'Kendrick Lamar', 'rap', '2026-04-15', '21:00:00', 3, 65.00, 120.00, 'IMAGES/kendrick.jpg', 'Le rappeur de Compton, lauréat du prix Pulitzer, s\'arrête à Bordeaux pour un show exceptionnel.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
 (9, 'Joey Bada$$', 'rap', '2026-04-21', '20:30:00', 2, 35.00, 50.00, 'IMAGES/joeybadas.jpg', 'Représentant de l\'East Coast old school, Joey Bada$$ livre des performances intenses et précises.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
 (10, 'Travis Scott', 'rap', '2026-05-28', '21:00:00', 3, 70.00, 130.00, 'IMAGES/travisscott.jpg', 'Le maître de la trap et des expériences immersives. Un show Travis Scott est une autre dimension.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
-(11, 'Julien Doré', 'variete', '2025-11-28', '20:30:00', 3, 35.00, 55.00, 'IMAGES/juliendore.jpg', 'Julien Doré en tournée pour son dernier album. Pop folk douce et poétique dans une grande salle.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
-(12, 'Angèle', 'variete', '2026-04-02', '20:30:00', 3, 40.00, 65.00, 'IMAGES/angele.jpg', 'La star belge de la pop revient avec son univers coloré et ses tubes imparables.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
+(11, 'Julien Doré', 'variete', '2026-11-28', '20:30:00', 3, 35.00, 55.00, 'IMAGES/juliendore.jpg', 'Julien Doré en tournée pour son dernier album. Pop folk douce et poétique dans une grande salle.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
+(12, 'Angèle', 'variete', '2026-04-02', '20:30:00', 3, 40.00, 65.00, 'IMAGES/angele.jpeg', 'La star belge de la pop revient avec son univers coloré et ses tubes imparables.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
 (13, 'Zaz', 'variete', '2026-04-08', '20:00:00', 5, 30.00, 45.00, 'IMAGES/zaz.jpg', 'La voix envoûtante de Zaz pour une soirée variété chaleureuse dans un cadre intimiste.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
 (14, 'Vianney', 'variete', '2026-04-15', '20:30:00', 2, 28.00, 40.00, 'IMAGES/vianney.jpg', 'Chanson française sincère et mélodique. Vianney touche droit au cœur à chaque concert.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
-(15, 'Yamè', 'variete', '2025-11-28', '20:30:00', 2, 15.00, 22.00, 'IMAGES/yame.jpg', 'Artiste rap/soul bordelais en pleine ascension. Un concert à ne pas manquer.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
-(16, 'Héléna', 'variete', '2025-12-03', '20:30:00', 3, 20.00, 35.00, 'IMAGES/helena.jpg', 'Pop française fraîche et sincère. Héléna séduit par sa voix cristalline et ses textes poétiques.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
+(15, 'Yamè', 'variete', '2026-11-28', '20:30:00', 2, 15.00, 22.00, 'IMAGES/yame.jpg', 'Artiste rap/soul bordelais en pleine ascension. Un concert à ne pas manquer.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
+(16, 'Héléna', 'variete', '2026-12-05', '20:30:00', 3, 20.00, 35.00, 'IMAGES/helena.jpg', 'Pop française fraîche et sincère. Héléna séduit par sa voix cristalline et ses textes poétiques.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
 (17, 'Damian Marley', 'reggae', '2026-05-14', '20:30:00', 2, 30.00, 45.00, 'IMAGES/damianmarley.jpg', 'Le fils de Bob Marley perpétue et réinvente le reggae roots avec une énergie communicative.', 'https://www.ticketmaster.fr', NULL, NULL, NULL, NULL),
 (18, 'Biga*Ranx', 'reggae', '2026-05-20', '20:30:00', 4, 20.00, 30.00, 'IMAGES/bigaranx.jpg', 'Figure incontournable du reggae digital français, Biga*Ranx enflamme les salles depuis 15 ans.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
 (19, 'SOJA', 'reggae', '2026-05-27', '20:00:00', 2, 25.00, 38.00, 'IMAGES/soja.jpg', 'Reggae fusion américain aux textes engagés et aux mélodies profondes.', 'https://www.fnacspectacles.com', NULL, NULL, NULL, NULL),
